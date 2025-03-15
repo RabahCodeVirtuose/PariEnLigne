@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!-- Déclaration des ressources pour l'internationalisation -->
+    <constant name="struts.custom.i18n.resources" value="texts"/>
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <package name="default" namespace="/" extends="struts-default">
+        <default-action-ref name="accueil"/> <!--il faut vérifier thagui elle est très importante ! -->
+        <action name="accueil">
+            <result>/WEB-INF/pages/acceuil.jsp</result>
+        </action>
+        <action name="connexion" class="actions.Connexion">
+            <result name="success">/WEB-INF/pages/menu.jsp</result>
+            <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+        </action>
+        <action name="deconnexion" class="actions.Deconnextion">
+            <result name="success">/WEB-INF/pages/acceuil.jsp</result>
+            <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+
+        </action>
+        <action name="voirLesMatch" class="actions.VoirLesMatch">
+            <result name="success">/WEB-INF/pages/matchDispo.jsp</result>
+            <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+
+        </action>
+       <action name="voirMesParis" class="actions.VoirMesParis">
+            <result name="success">/WEB-INF/pages/mesParis.jsp</result>
+           <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+       </action>
+        <action name="index" class="actions.Passverif">
+        <result name="success">/WEB-INF/pages/menu.jsp</result>
+       <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+        </action>
+        <action name="voirMatchDetails" class="actions.VoirMatchDetails">
+            <result name="success">/WEB-INF/pages/voirMatchDetails.jsp</result>
+            <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+
+        </action>
+        <action name="parierSurCeMatchOuvrirPage" class="actions.parierSurCeMatchOuvrirPage">
+            <result name="success">/WEB-INF/pages/tableauParier.jsp</result>
+            <result name="input">/WEB-INF/pages/tableauParier.jsp</result>
+        </action>
+
+        <action name="parierSurCeMatch" class="actions.ParierDD">
+            <result name="success">/WEB-INF/pages/mesParis.jsp</result>
+            <result name="input">/WEB-INF/pages/tableauParier.jsp</result>
+
+        </action>
+        <action name="annulerParis" class="actions.AnnulerParis">
+            <result name="success">/WEB-INF/pages/mesParis.jsp</result>
+            <result name="input">/WEB-INF/pages/mesParis.jsp</result>
+        </action>
+        <action name="ajouterMatch" class="actions.Passverif2">
+            <result name="success">/WEB-INF/pages/ajouterMatch.jsp</result>
+            <result name="input">/WEB-INF/pages/acceuil.jsp</result>
+
+        </action>
+        <action name="ajouterMathyous" class="actions.AjouterMathyous">
+            <result name="success">/WEB-INF/pages/matchDispo.jsp</result>
+            <result name="input">/WEB-INF/pages/ajouterMatch.jsp</result>
+            <result name="zinzang">/WEB-INF/pages/acceuil.jsp</result>
+        </action>
+    </package>
+</struts>
