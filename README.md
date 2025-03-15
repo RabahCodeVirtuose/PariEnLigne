@@ -1,7 +1,7 @@
 # 🌍 Application de Gestion Multilingue
 
 ## 📌 Présentation
-Cette application web est une plateforme permettant aux utilisateurs de naviguer dans différentes langues et d'interagir avec une interface fluide et ergonomique. Elle est conçue pour faciliter la gestion des préférences linguistiques des utilisateurs et garantir une accessibilité optimale.
+Application de Pari en Ligne (avec internationalisation)
 
 ### 🎯 Objectif
 L'application a été développée dans un cadre académique et professionnel pour démontrer la maîtrise des technologies web et la mise en œuvre des bonnes pratiques de développement.
